@@ -23,7 +23,7 @@
       }
       .rectangle {
         width: 100%;
-        background-color: #212121; /* Màu nền đen */
+        background-color: #212121;
         color: white;
         text-align: center;
         padding: 10px 0;
@@ -33,126 +33,142 @@
       }
       .rectangle-top {
         top: 0;
-        position: absolute;
         left: 50%;
-        transform: translateX(-5%);
+        transform: translateX(-50%);
         border: 2px solid white;
         border-radius: 7px;
-        padding: 5px 10px; /* Giảm padding ngang */
-        width: 120px; /* Giới hạn chiều rộng */
-        text-align: center; /* Căn giữa chữ bên trong */
+        padding: 5px 10px;
+        width: 120px;
       }
-
       .rectangle-bottom {
         bottom: 0;
-        position: absolute;
-        right: 50%;
-        transform: translateX(45%);
+        left: 50%;
+        transform: translateX(-50%);
         border: 2px solid white;
         border-radius: 7px;
-        padding: 5px 10px; /* Giảm padding ngang */
-        width: 120px; /* Giới hạn chiều rộng */
-        text-align: center; /* Căn giữa chữ bên trong */
+        padding: 5px 10px;
+        width: 120px;
       }
       .objects-container {
         display: flex;
-        justify-content: center; /* Căn giữa các object */
-        gap: 7px; /* Giảm khoảng cách giữa các object */
+        justify-content: center;
+        gap: 10px;
         width: 100%;
         max-width: 375px;
         padding: 10px 0;
         position: absolute;
       }
       .top-container {
-        top: 40px; /* Đẩy các object xuống để không bị đè lên bởi thanh "4000 LP" */
+        top: 40px;
+        flex-direction: row;
       }
       .bottom-container {
-        bottom: 40px; /* Đẩy các object lên để không bị đè lên bởi thanh "4000 LP" */
+        bottom: 40px;
       }
-      .object {
+      .button-object {
         width: 60px;
         height: 87px;
         background-color: white;
+        border: none;
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: bold;
         color: black;
-        overflow: hidden;
+        cursor: pointer;
       }
-      .object img {
+      .button-object img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+      .menu {
+        display: none;
+        position: absolute;
+        background-color: #212121;
+        color: black;
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 80px;
+        padding: 5px;
+        text-align: center;
+      }
+      .menu button {
+        display: block;
+        width: 100%;
+        border: none;
+        background: none;
+        padding: 5px;
+        cursor: pointer;
+      }
+      .menu button:hover {
+        background-color: #212121;
       }
     </style>
   </head>
   <body>
     <div class="rectangle rectangle-top">4000 LP</div>
     <div class="objects-container top-container">
-      <div class="object">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVkGZpvaZjC0Dcf9cmMvYSIg3bCZbJ7cyraQ&s"
-          alt="Object 1"
-        />
-      </div>
-      <div class="object">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVkGZpvaZjC0Dcf9cmMvYSIg3bCZbJ7cyraQ&s"
-          alt="Object 2"
-        />
-      </div>
-      <div class="object">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVkGZpvaZjC0Dcf9cmMvYSIg3bCZbJ7cyraQ&s"
-          alt="Object 3"
-        />
-      </div>
-      <div class="object">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVkGZpvaZjC0Dcf9cmMvYSIg3bCZbJ7cyraQ&s"
-          alt="Object 4"
-        />
-      </div>
-      <div class="object">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVkGZpvaZjC0Dcf9cmMvYSIg3bCZbJ7cyraQ&s"
-          alt="Object 5"
-        />
-      </div>
+      <button class="button-object object-1" onclick="toggleButtons(event)">
+        Object 1
+      </button>
+      <button class="button-object object-2">Object 2</button>
+      <button class="button-object object-3">Object 3</button>
+      <button class="button-object object-4">Object 4</button>
+      <button class="button-object object-5">Object 5</button>
     </div>
     <div class="objects-container bottom-container">
-      <div class="object">
-        <img
-          src="https://ygovietnamcdn.azureedge.net/storage/Card/12482652.jpg"
-          alt="Object 6"
-        />
-      </div>
-      <div class="object">
-        <img
-          src="https://ygovietnamcdn.azureedge.net/storage/Card/9852718.jpg"
-          alt="Object 7"
-        />
-      </div>
-      <div class="object">
-        <img
-          src="https://ygovietnamcdn.azureedge.net/storage/Card/83764719.jpg"
-          alt="Object 8"
-        />
-      </div>
-      <div class="object">
-        <img
-          src="https://ygovietnamcdn.azureedge.net/storage/Card/38120068.jpg"
-          alt="Object 9"
-        />
-      </div>
-      <div class="object">
-        <img
-          src="https://ygovietnamcdn.azureedge.net/storage/Card/89631139.jpg"
-          alt="Object 10"
-        />
-      </div>
+      <button class="button-object object-6">Object 6</button>
+      <button class="button-object object-7">Object 7</button>
+      <button class="button-object object-8">Object 8</button>
+      <button class="button-object object-9">Object 9</button>
+      <button class="button-object object-10">Object 10</button>
+    </div>
+    <div id="menu" class="menu">
+      <button
+        onclick="setAction()"
+        style="
+          background-color: #212121;
+          color: white;
+          border: 1px solid white;
+          border-radius: 7px;
+        "
+      >
+        Set
+      </button>
+      <button
+        onclick="activeAction()"
+        style="
+          background-color: #212121;
+          color: white;
+          border: 1px solid white;
+          border-radius: 7px;
+        "
+      >
+        Active
+      </button>
     </div>
     <div class="rectangle rectangle-bottom">4000 LP</div>
+    <script>
+      function toggleButtons(event) {
+        const menu = document.getElementById("menu");
+        const button = event.target;
+        const rect = button.getBoundingClientRect();
+        menu.style.top = rect.bottom + "px";
+        menu.style.left = rect.left + "px";
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      }
+      function setAction() {
+        alert("Set Action Selected");
+        hideMenu();
+      }
+      function activeAction() {
+        alert("Active Action Selected");
+        hideMenu();
+      }
+      function hideMenu() {
+        document.getElementById("menu").style.display = "none";
+      }
+    </script>
   </body>
 </html>
