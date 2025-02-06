@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=375, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Trang web iPhone 8</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        background-color: #212121;
+        color: white;
+        text-align: center;
+        overflow: hidden;
+      }
+      .rectangle {
+        width: 100%;
+        background-color: #212121; /* Màu nền đen */
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 20px;
+        position: absolute;
+        left: 0;
+      }
+      .rectangle-top {
+        top: 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-5%);
+        border: 2px solid white;
+        border-radius: 7px;
+        padding: 5px 10px; /* Giảm padding ngang */
+        width: 120px; /* Giới hạn chiều rộng */
+        text-align: center; /* Căn giữa chữ bên trong */
+      }
+
+      .rectangle-bottom {
+        bottom: 0;
+        position: absolute;
+        right: 50%;
+        transform: translateX(45%);
+        border: 2px solid white;
+        border-radius: 7px;
+        padding: 5px 10px; /* Giảm padding ngang */
+        width: 120px; /* Giới hạn chiều rộng */
+        text-align: center; /* Căn giữa chữ bên trong */
+      }
+      .objects-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 375px;
+        padding: 10px 0;
+        position: absolute;
+      }
+      .top-container {
+        top: 40px; /* Đẩy các object xuống để không bị đè lên bởi thanh "4000 LP" */
+      }
+      .bottom-container {
+        bottom: 40px; /* Đẩy các object lên để không bị đè lên bởi thanh "4000 LP" */
+      }
+      .object {
+        width: 66px;
+        height: 97px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: black;
+        overflow: hidden;
+      }
+      .object img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rectangle rectangle-top">4000 LP</div>
+    <div class="objects-container top-container">
+      <div class="object">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVkGZpvaZjC0Dcf9cmMvYSIg3bCZbJ7cyraQ&s"
+          alt="Object 1"
+        />
+      </div>
+      <div class="object">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVkGZpvaZjC0Dcf9cmMvYSIg3bCZbJ7cyraQ&s"
+          alt="Object 2"
+        />
+      </div>
+      <div class="object">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVkGZpvaZjC0Dcf9cmMvYSIg3bCZbJ7cyraQ&s"
+          alt="Object 3"
+        />
+      </div>
+      <div class="object">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVkGZpvaZjC0Dcf9cmMvYSIg3bCZbJ7cyraQ&s"
+          alt="Object 4"
+        />
+      </div>
+      <div class="object">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVkGZpvaZjC0Dcf9cmMvYSIg3bCZbJ7cyraQ&s"
+          alt="Object 5"
+        />
+      </div>
+    </div>
+    <div class="objects-container bottom-container">
+      <div class="object">
+        <img
+          src="https://ygovietnamcdn.azureedge.net/storage/Card/12482652.jpg"
+          alt="Object 6"
+        />
+      </div>
+      <div class="object">
+        <img
+          src="https://ygovietnamcdn.azureedge.net/storage/Card/9852718.jpg"
+          alt="Object 7"
+        />
+      </div>
+      <div class="object">
+        <img
+          src="https://ygovietnamcdn.azureedge.net/storage/Card/83764719.jpg"
+          alt="Object 8"
+        />
+      </div>
+      <div class="object">
+        <img
+          src="https://ygovietnamcdn.azureedge.net/storage/Card/38120068.jpg"
+          alt="Object 9"
+        />
+      </div>
+      <div class="object">
+        <img
+          src="https://ygovietnamcdn.azureedge.net/storage/Card/89631139.jpg"
+          alt="Object 10"
+        />
+      </div>
+    </div>
+    <div class="rectangle rectangle-bottom">4000 LP</div>
+  </body>
+</html>
